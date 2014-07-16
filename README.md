@@ -13,19 +13,65 @@ Research the following term and summarize your findings on it two to three sente
 
 * `higher-order function`
 
+Higher order functions are functions that work on other functions, either by taking them as values or returning them, to abstract blocks of code. They can make new functions, change other functions, or help customize control flow.
+
+,,,
 
 Pretending we implemented the following methods, update this README with a description of each of the following and an example you've created:
 
 
-* `max`
-* `min`
-* `each`
-* `map`
-* `filter`: [note](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
-* `reduce`: [note](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
+* `max` - Returns the maximum value of a node set.
+
+var Iterators = (function() {
+  var api = {
+    max: function(numList){
+      var max = -Infinity;
+      for (var i = 0; i < numList.length; i++) {
+        if ( numList[i] > max ) {
+          max = numList[i];
+        }
+      };
+      return max;
+    }
+  };
+
+  return api;
+})();
+
+module.exports = Iterators;
+
+,,,
+
+
+* `min` - Returns the minimum value of a node set.
+
+
+
+
+* `each` - executes a provided function once per array element.
+
+
+
+
+* `map` - creates a new array with the results of calling a provided function on every element in 			  this arrary.
+
+
+
+
+* `filter`: [note](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) - creates a new array with all elements that pass the test implemented by the provided function.
+
+
+
+
+
+* `reduce`: [note](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce) - 
+
+
+
+
 * `reject`: [note](http://underscorejs.org/#reject)
 
-Use the notes provided to help guide you explanation.
+Use the notes provided to help guide your explanation.
 
 
 
